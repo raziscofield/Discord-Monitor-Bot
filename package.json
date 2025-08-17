@@ -1,0 +1,19 @@
+{
+  "name": "discord-monitor-bot",
+  "version": "1.0.0",
+  "description": "Advanced Discord bot monitoring system",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["discord", "bot", "monitor", "presence"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "mongoose": "^8.5.2",
+    "dotenv": "^16.4.5"
+  }
+}
