@@ -52,5 +52,5 @@ A **powerful modular monitoring bot** for Discord that tracks other bots' presen
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/raziscofield/discord-monitor-bot.git
+https://github.com/raziscofield/Discord-Monitor-Bot.git
 cd discord-monitor-bot
