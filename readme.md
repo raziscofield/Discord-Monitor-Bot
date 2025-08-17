@@ -1,6 +1,8 @@
 # Discord Monitor Bot
 
-A **powerful modular monitoring bot** for Discord that tracks other bots' presence (online/offline/idle/dnd) and provides real-time updates in your server with rich embeds and interactive components. Built with **Discord.js v14**, fully modular, and production-ready.
+A **powerful modular monitoring bot** for Discord that tracks other bots' presence (online/offline/idle/dnd) and provides real-time updates in your server with rich embeds and interactive components. Built with **Discord.js v14**, fully modular, and production-ready.  
+
+> **Made with ❤️ by [Razi](https://github.com/raziscofield)**  
 
 ---
 
