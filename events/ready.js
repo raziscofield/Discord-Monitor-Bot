@@ -8,10 +8,10 @@ export default {
         const timestamp = new Date().toISOString();
         console.log(`\x1b[32m[${timestamp}] [SUCCESS]\x1b[0m ${client.user.tag} is online and ready!`);
         
-        // Set bot activity
+        
         client.user.setActivity('Bot Status Changes', { type: ActivityType.Watching });
         
-        // Load tracked bots into memory
+        
         try {
             const trackedBots = await TrackedBot.find({});
             client.monitoredBots = new Map();
@@ -27,7 +27,7 @@ export default {
             
             console.log(`\x1b[36m[${timestamp}] [INFO]\x1b[0m Loaded ${trackedBots.length} tracked bots into memory`);
             
-            // Start presence monitoring
+            
             startPresenceMonitoring(client);
             
         } catch (error) {
@@ -43,7 +43,7 @@ function startPresenceMonitoring(client) {
         } catch (error) {
             console.error('Error in presence monitoring:', error);
         }
-    }, 3000); // 30 seconds
+    }, 3000); 
     
     client.monitorInterval = monitorInterval;
     console.log(`\x1b[36m[${new Date().toISOString()}] [INFO]\x1b[0m Started presence monitoring (30s intervals)`);
@@ -60,7 +60,7 @@ async function checkBotStatuses(client) {
             const member = guild.members.cache.get(botId);
             const presenceStatus = member?.presence?.status;
 
-            // Treat online, idle, and dnd as "online"
+            
             const currentStatus = (presenceStatus === 'online' || presenceStatus === 'idle' || presenceStatus === 'dnd') 
                 ? 'online' 
                 : 'offline';
@@ -68,13 +68,13 @@ async function checkBotStatuses(client) {
             if (currentStatus !== botData.lastStatus) {
                 await handleStatusChange(client, botId, currentStatus, botData);
                 
-                // Update memory
+          
                 client.monitoredBots.set(botId, {
                     ...botData,
                     lastStatus: currentStatus
                 });
                 
-                // Update database
+            
                 await TrackedBot.updateOne(
                     { botId },
                     { 

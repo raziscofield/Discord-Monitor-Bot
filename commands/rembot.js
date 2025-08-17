@@ -1,4 +1,4 @@
-// commands/removebot.js
+
 import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 import TrackedBot from '../models/TrackedBot.js';
 
@@ -29,7 +29,7 @@ export default {
                 });
             }
             
-            // Get bot info for embed
+           
             const targetUser = await interaction.client.users.fetch(botId).catch(() => null);
             
             const embed = new EmbedBuilder()

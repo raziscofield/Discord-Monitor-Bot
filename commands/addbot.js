@@ -119,7 +119,7 @@ export default {
                     new ButtonBuilder()
                         .setCustomId(`remove_bot_${botId}`)
                         .setLabel('Remove from List')
-                        .setStyle(ButtonStyle.Secondary) // Gray out when offline
+                        .setStyle(ButtonStyle.Secondary) 
                         .setEmoji('🗑️')
                 );
             }
