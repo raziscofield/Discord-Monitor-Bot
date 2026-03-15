@@ -4,7 +4,7 @@ A **powerful modular monitoring bot** for Discord that tracks other bots' presen
 
 > **Made with ❤️ by [Razi](https://github.com/raziscofield)**  
 
----
+
 
 ## Features
 
